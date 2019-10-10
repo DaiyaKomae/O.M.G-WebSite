@@ -1,0 +1,73 @@
+html {
+    background-color: rgb(255, 253, 153);
+}
+
+header {
+    color: black;
+    background-color: rgb(127, 212, 69);
+    border: 5px solid rgb(127, 212, 69);
+    border-radius: 5px;
+}
+
+p {
+    text-align: right;
+}
+
+/* 写真選択ボタン */
+.upfile {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+  }
+  
+  .upfile:hover {
+    background: #00bcd4;
+    color: white;
+  }
+
+/* カテゴリー */
+.radio {
+    display: inline-block;
+    margin: 0 5px 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+.radio:hover {
+    text-decoration: underline;
+}
+
+.radio.checked {
+    border-color: #288d00;
+    color: #288d00;
+}
+
+/* タイトル */
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.ef input[type='text']:focus {
+	border: 1px solid #288d00;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(26, 131, 0, 0.5);
+}

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/form.css">
+        <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="../js/vendor/jquery.colorbox-min.js"></script>
+    </head>
+    <header>
+            <h3>アップロードしたい写真を選択し、題名とカテゴリーを入力してください。</h3>
+    </header>
+    <body>
+        <form action="form_daily_life.php" method="post" enctype="multipart/form-data">
+            <br>
+            <input name="userfile[]" type="file" class="upfile" onChange="printfile()"  multiple><br><br>
+            <div class="cp_iptext">
+                <label class="ef">
+                    <input type="text" name="text1" placeholder="タイトル">
+                </label>
+            </div><br>
+            <label for="text2">category: </label>
+            <label class="radio"><input type="radio" name="text2" value="dance">Dance</label>
+            <label class="radio"><input type="radio" name="text2" value="people">People</label>
+            <label class="radio"><input type="radio" name="text2" value="outdoor">Outdoor</label>
+            <label class="radio"><input type="radio" name="text2" value="uchiage">Uchiage</label><br><br>
+            <p><input type="submit" value="Upload" class="upfile"></p>
+        </form>
+        <div id="result"></div>
+        <script>
+            function printfile(){
+                var fileList = document.getElementById("upfile").files;
+                var list = "";
+                for(var i=0; i<fileList.length; i++){
+                list += fileList[i].name + "<br>";
+                }
+                document.getElementById("result").innerHTML = list;
+            }
+            $(function(){
+                var checkbox = $('input[type="checkbox"]');
+                var radio = $('input[type="radio"]');
+            
+                boxChecked();
+                checkbox.on('change', function(){
+                    boxChecked();
+                });
+            
+                radioChecked();
+                radio.on('click', function(){
+                    radioChecked();
+                });
+            
+                function boxChecked() {
+                    checkbox.each(function() {
+                        if($(this).prop('checked')) {
+                            $(this).parent().addClass('checked');
+                        } else {
+                            $(this).parent().removeClass('checked');
+                        }
+                    });
+                }
+            
+                function radioChecked() {
+                    radio.each(function() {
+                        if($(this).prop('checked')) {
+                            $(this).parent().addClass('checked');
+                        } else {
+                            $(this).parent().removeClass('checked');
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory in 2017</title>
+        <link rel="stylesheet" href="./css/colorbox.css">
+        <link rel="stylesheet" href="./css/gallery.css">
+        <script src="./js/vendor/modernizr.custom.min.js"></script>
+        <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="./js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="./js/vendor/jquery.smooth-scroll.min.js"></script>
+        <script src="./js/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="./js/vendor/masonry.pkgd.min.js"></script>
+        <script src="./js/vendor/jquery.colorbox-min.js"></script>
+        <script src="./js/gallery_2017.js"></script>
+    </head>
+    <body>
+        <header class="page-header" role="banner">    
+            <div class="inner clearfix">
+                <h1 class="site-logo"><a href="index.html"><img id="site-logo" src="./img/OMG_logo_2017.JPG" alt="" width="100" height="100"></a></h1>
+                <p id="upload_p"><a href="form/form_2017.html" id="upload">UPLOAD</a></p>
+                <p id="delete_p"><a href="form/delete_2017.html" id="delete">DELETE</a></p>
+                <form class="filter-form" id="gallery-filter">
+                    <span class="form-item">
+                        <input type="radio" name="filter" id="filter-all" value="all" checked>
+                        <label for="filter-all">All</label>
+                    </span>
+                    <span class="form-item">
+                        <input type="radio" name="filter" id="filter-dance" value="dance">
+                        <label for="filter-dance">Dance</label>
+                    </span>
+                    <span class="form-item">
+                        <input type="radio" name="filter" id="filter-people" value="people">
+                        <label for="filter-people">People</label>
+                    </span>
+                    <span class="form-item">
+                        <input type="radio" name="filter" id="filter-outdoor" value="outdoor">
+                        <label for="filter-outdoor">Outdoors</label>
+                    </span>
+                    <span class="form-item">
+                        <input type="radio" name="filter" id="filter-uchiage" value="uchiage">
+                        <label for="filter-uchiage">Uchiage</label>
+                    </span>
+                </form>
+            </div>
+        </header>
+
+        <div class="page-main" role="main">
+            <ul class="gallery" id="gallery"></ul>
+            <button class="load-more" id="load-more">Load more</button>
+        </div>
+    </body>
+</html>

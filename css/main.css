@@ -1,0 +1,81 @@
+html {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #FFCC00;
+    background-image: none;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.sub {
+    margin: 10px 10px 10px 25px;
+    float: left;
+}
+
+.sub a {
+    position: relative;
+}
+
+#twitter {
+    border-radius: 20px;
+}
+
+.page-header {
+    background-color: #fff;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+#images {
+    text-align: center;
+}
+
+#images p {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 80px;
+}
+
+#images p strong {
+    color: #FFCC00;
+    font-size: 50px;
+}
+
+.page-main {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    top: 30px;
+}
+
+#images p strong {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding: 0px;
+    opacity: 0;
+    left: -200%;
+}
+
+#images p span {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6),
+                inset 0 0 100px rgba(50, 30, 0, 0.3);
+    background: rgba(255, 155, 0, 0.2);
+    opacity: 0;
+}
